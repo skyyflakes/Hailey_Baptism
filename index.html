@@ -14,12 +14,12 @@
 
     <style>
         :root {
-            --primary-rose: #8C3B52;
-            --soft-rose: #C27D90;
-            --light-pink: #F9ECEF;
-            --accent-gold: #B8860B;
+            --primary-rose: #9E5268;
+            --soft-rose: #D8A4B1;
+            --light-pink: #FAF0F3;
+            --accent-gold: #C59B3F;
             --text-dark: #4A3A3E;
-            --bg-cream: #FAF6F0;
+            --bg-cream: #FAF7F2;
         }
 
         body {
@@ -30,6 +30,31 @@
             padding: 0;
             overflow-x: hidden;
             position: relative;
+        }
+
+        /* Music Floating Toggle Button */
+        .music-control-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-rose);
+            color: white;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .music-control-btn:hover {
+            transform: scale(1.08);
+            background-color: #833e52;
         }
 
         /* Falling Petals Background Canvas */
@@ -89,12 +114,12 @@
             padding: 2rem;
             position: relative;
             z-index: 20;
-            background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(250,246,240,0.9) 100%);
+            background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(250,247,242,0.9) 100%);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
         .hero-badge {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--primary-rose);
@@ -130,23 +155,23 @@
             padding: 14px 36px;
             border-radius: 50px;
             border: none;
-            box-shadow: 0 8px 25px rgba(140, 59, 82, 0.3);
+            box-shadow: 0 8px 25px rgba(158, 82, 104, 0.25);
             transition: all 0.3s ease;
             cursor: pointer;
             animation: pulse-btn 2s infinite;
         }
 
         .btn-see-invitation:hover {
-            background-color: #6d2c3e;
+            background-color: #833e52;
             color: #fff;
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(140, 59, 82, 0.45);
+            box-shadow: 0 12px 30px rgba(158, 82, 104, 0.35);
         }
 
         @keyframes pulse-btn {
-            0% { box-shadow: 0 0 0 0 rgba(140, 59, 82, 0.5); }
-            70% { box-shadow: 0 0 0 18px rgba(140, 59, 82, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(140, 59, 82, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(158, 82, 104, 0.4); }
+            70% { box-shadow: 0 0 0 18px rgba(158, 82, 104, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(158, 82, 104, 0); }
         }
 
         /* 2ND PAGE: Main Content Container */
@@ -163,12 +188,12 @@
             max-width: 680px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
             padding: 40px 30px;
             position: relative;
-            border: 1px solid rgba(194, 125, 144, 0.2);
-            background-image: radial-gradient(#faf0f2 1px, transparent 1px);
+            border: 1px solid rgba(216, 164, 177, 0.3);
+            background-image: radial-gradient(#faf0f3 1.2px, transparent 1.2px);
             background-size: 20px 20px;
         }
 
@@ -185,8 +210,8 @@
             height: 100%;
             border-radius: 50%;
             padding: 8px;
-            background: linear-gradient(135deg, #e8a7b8, #fdfbfb, #d892a4);
-            box-shadow: 0 8px 25px rgba(140, 59, 82, 0.2);
+            background: linear-gradient(135deg, #f5cad6, #ffffff, #e3b0bd);
+            box-shadow: 0 8px 25px rgba(158, 82, 104, 0.15);
             position: relative;
         }
 
@@ -237,7 +262,7 @@
             color: var(--accent-gold);
             line-height: 1.2;
             margin: 15px 0 25px 0;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.03);
         }
 
         /* Event Details Box */
@@ -256,7 +281,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             color: var(--primary-rose);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             letter-spacing: 1px;
         }
 
@@ -288,7 +313,7 @@
         .godparents-section {
             margin-top: 40px;
             padding-top: 30px;
-            border-top: 2px dashed rgba(194, 125, 144, 0.3);
+            border-top: 2px dashed rgba(216, 164, 177, 0.4);
         }
 
         .godparents-title {
@@ -308,7 +333,7 @@
         .godparents-column-header {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             letter-spacing: 2px;
             color: var(--primary-rose);
             text-transform: uppercase;
@@ -378,6 +403,16 @@
     </style>
 </head>
 <body>
+
+    <!-- Local MP3 Audio Track -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="baby-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Toggle Button -->
+    <button class="music-control-btn" id="music-toggle" onclick="toggleMusic()" title="Toggle Background Music">
+        <i class="fa-solid fa-music" id="music-icon"></i>
+    </button>
 
     <!-- Falling Petals Canvas -->
     <canvas id="petal-canvas"></canvas>
@@ -484,11 +519,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Smooth transition from Landing Screen to Main Invitation
+        const audio = document.getElementById('bg-music');
+        const musicIcon = document.getElementById('music-icon');
+
+        // Soft, comfortable volume (40%)
+        audio.volume = 0.4;
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    musicIcon.className = 'fa-solid fa-music';
+                }).catch(err => {
+                    alert("Please make sure 'baby-music.mp3' is placed in the same folder as index.html");
+                });
+            } else {
+                audio.pause();
+                musicIcon.className = 'fa-solid fa-volume-xmark';
+            }
+        }
+
         function showInvitation() {
             const landing = document.getElementById('landing-screen');
             const main = document.getElementById('main-content');
             
+            // Play audio on button interaction
+            audio.play().then(() => {
+                musicIcon.className = 'fa-solid fa-music';
+            }).catch(e => {
+                console.log("Audio file missing or blocked:", e);
+            });
+
             landing.style.opacity = '0';
             landing.style.transform = 'translateY(-20px)';
             
@@ -530,7 +590,7 @@
                 this.angle = Math.random() * 360;
                 this.spin = Math.random() * 2 - 1;
                 this.opacity = Math.random() * 0.5 + 0.3;
-                this.color = ['#e8a7b8', '#c27d90', '#f3d2dc', '#d892a4'][Math.floor(Math.random() * 4)];
+                this.color = ['#f3cad6', '#d8a4b1', '#faf0f3', '#e8b8c5'][Math.floor(Math.random() * 4)];
             }
 
             update() {
